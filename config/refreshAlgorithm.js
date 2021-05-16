@@ -5,6 +5,7 @@ function refreshAlgorithm() {
      * Used when the refresh button is pressed
      */
     array = [];
+    rectWidth = floor(canvasWidth / nRectangles);
     generateArray();
     selectSortingAlgorithm();
 }
@@ -16,4 +17,6 @@ function generateArray() {
     for (let i = 0; i < floor(canvasWidth/rectWidth); i++) {
         array.push(floor(random(0, canvasHeight)));
     }
+    rectangleColors = array.map(() => -1);
 }
+

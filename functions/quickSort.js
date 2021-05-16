@@ -1,18 +1,34 @@
 
 async function quickSort(arr, start, end) {
+    /**
+     * Two lines are essential to be added on the begginning of the algorithm to identify refresh and stop algorithm. 
+     * All your function params must be cleared
+     */
+    const refreshBtn = document.getElementById('refreshBtn');
+    refreshBtn.addEventListener("click", () => { arr = []; start = 0; end = 0; });
+
     if (start >= end) {
         return;
     }
 
     let index = await partition(arr, start, end);
+    console.log(arr);
 
-    await Promise.all([
-        quickSort(arr, start, index - 1),
-        quickSort(arr, index + 1, end)
-    ]);
+    // await Promise.all([
+    await quickSort(arr, start, index - 1),
+    await quickSort(arr, index + 1, end)
+    // ]);
 }
 
 async function partition(arr, start, end) {
+    /**
+     * Two lines are essential to be added on the begginning of the algorithm to identify refresh and stop algorithm. 
+     * All your function params must be cleared
+     */
+    const refreshBtn = document.getElementById('refreshBtn');
+    refreshBtn.addEventListener("click", () => { arr = []; start = 0; end = 0 });
+    
+
     let pivotValue = arr[end];
     let pivotIndex = start;
 
