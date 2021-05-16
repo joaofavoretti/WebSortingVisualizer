@@ -24,6 +24,10 @@ function selectSortingAlgorithm() {
         case 'mergeSort':
             mergeSort(array, 0, array.length -1);
             break;
+
+        case 'bogoSort':
+            bogoSort(array);
+            break;
         
         default:
     }
