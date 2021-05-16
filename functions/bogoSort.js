@@ -9,7 +9,6 @@ async function bogoSort(array) {
     while (!isSorted(array)) {
         let i = getRandomInt(0, array.length);
         let j = getRandomInt(0, array.length);
-        console.log(i, j);
         await swap(array, i, j);
     }
 }
