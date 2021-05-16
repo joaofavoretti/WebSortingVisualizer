@@ -1,10 +1,10 @@
 
-function changeColor(v, a, b) {
+function changeColor(a, b) {
     rectangleColors[a] = 1;
     rectangleColors[b] = 1;
 }
 
-function unChangeColor(v, a, b) {
+function unChangeColor(a, b) {
     rectangleColors[a] = -1;
     rectangleColors[b] = -1;
 }

@@ -9,12 +9,12 @@ async function swap (v, a, b){
      * @param b index of the value 2 that will be swapped
      */
 
-    changeColor(v, a, b);
+    changeColor(a, b);
     await sleep(delay);
     let temp = v[a];
     v[a] = v[b];
     v[b] = temp;
-    unChangeColor(v, a, b);
+    unChangeColor(a, b);
 }
 
 function sleep(time) {

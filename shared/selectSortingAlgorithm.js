@@ -21,6 +21,10 @@ function selectSortingAlgorithm() {
             quickSort(array, 0, array.length - 1);
             break;
         
+        case 'mergeSort':
+            mergeSort(array, 0, array.length -1);
+            break;
+        
         default:
     }
 
