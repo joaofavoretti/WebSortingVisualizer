@@ -2,12 +2,14 @@
  * Global variables
  */
 var array = [];
+var savedArray = [];
 var rectangleColors = [];
 var canvasWidth;
 var canvasHeight;
 var rectWidth;
-var delay = 100;
-var nRectangles = 100;
+var algorithmPaused = false;
+var delay = 50;
+var nRectangles = 50;
 
 function setup() {
     canvasWidth = windowWidth;

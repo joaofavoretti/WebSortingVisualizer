@@ -12,7 +12,6 @@ async function quickSort(arr, start, end) {
     }
 
     let index = await partition(arr, start, end);
-    console.log(arr);
 
     // await Promise.all([
     await quickSort(arr, start, index - 1),

@@ -5,6 +5,9 @@ function addEventListeners() {
     const refreshBtn = document.getElementById('refreshBtn');
     refreshBtn.addEventListener("click", refreshAlgorithm);
 
+    const pauseBtn = document.getElementById('pauseBtn');
+    pauseBtn.addEventListener("click", stopLoop);
+
     const rectanglesRange = document.getElementById('rectanglesRange');
     rectanglesRange.addEventListener('input', () => {
         nRectangles = rectanglesRange.value;

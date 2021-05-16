@@ -16,6 +16,7 @@
     <!-- Config functions -->
     <script src="config/refreshAlgorithm.js"></script>
     <script src="config/changeColorRectangles.js"></script>
+    <script src="config/stopLoop.js"></script>
     <script src="shared/selectSortingAlgorithm.js"></script>
     <script src="shared/swap.js"></script>
 
@@ -43,7 +44,7 @@
                     <label>Delay per swap (milliseconds):</label>
                     <div class="d-flex">
                         <input type="range" min="10" max="500" class="form-range" id="delayRange">
-                        <span class="ps-2" id="delayValue">10</span>
+                        <span class="ps-2" id="delayValue">50</span>
                     </div>
                 </div>
 
@@ -59,11 +60,14 @@
                 <!-- Select input -->
                 <div class="col-3 d-flex align-items-center">
                     <select class="form-select" aria-label="selectAlgorithm" id="selectAlgorithm">
-                        <option value="bubbleSort">BubbleSort</option>
-                        <option selected value="quickSort">QuickSort</option>
+                        <option selected value="bubbleSort">BubbleSort</option>
+                        <option value="quickSort">QuickSort</option>
                     </select>
                     <button type="button" id="refreshBtn" class="ms-2 btn btn-light">
-                        <img src="assets/replay_black_24dp.svg" />
+                        <img src="assets/replay_black.svg" />
+                    </button>
+                    <button type="button" id="pauseBtn" class="ms-2 btn btn-light">
+                        <img id="pauseImg" src="assets/pause_black.svg" />
                     </button>
                 </div>
             </div>
